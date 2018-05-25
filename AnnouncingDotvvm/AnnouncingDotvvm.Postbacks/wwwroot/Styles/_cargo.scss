@@ -1,0 +1,41 @@
+﻿.cargo {
+    width: 80px;
+    height: 80px;
+    background-image: url('/cargo.png');
+    font-size: 30px;
+    text-align: left;
+    text-indent: 20px;
+    line-height: 70px;
+    color: white;
+}
+
+.cargo.moving {
+    position: absolute;
+    bottom: -15px;
+}
+
+.cargo.delivered {
+    display: inline-block;
+}
+
+.canvas {
+    align-self: flex-end;
+    position: relative;
+    width: 380px;
+    height: 5rem;
+    border-bottom: solid 8px gray;
+}
+
+
+.cargo-box {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    height: 50vh;
+    margin-top: 2rem;
+}
+
+.cargos {
+    margin-left: 5rem;
+    flex: 1 1 auto;
+}

@@ -2,44 +2,36 @@
 @masterPage Views/MasterPage.dotmaster
 <dot:Content ContentPlaceHolderID="MainContent">
 
-	<h1>PostBack Concurrency</h1>
-
-    <div class="canvas">
-    </div>
+    <h1>PostBack Concurrency</h1>
 
     <div class="control-panel">
-
-        <p>
-            <bp:Button Text="Send Cargo (Default)"
-                       Click="{command: SendCargo(Index)}"
-                       PostBack.Concurrency="None"
-                       Type="Primary" />
-        </p>
-
-        <p>
-            <bp:Button Text="Send Cargo (Deny)"
-                       Click="{command: SendCargo(Index)}"
-                       PostBack.Concurrency="Deny"
-                       Type="Primary" />
-        </p>
-
-        <p>
-            <bp:Button Text="Send Cargo (Queue)"
+        <bp:Button Text="Send Cargo (Default)"
+                    Click="{command: SendCargo(Index)}"
+                    PostBack.Concurrency="None"
+                    Type="Primary" />
+        <bp:Button Text="Send Cargo (Deny)"
+                    Click="{command: SendCargo(Index)}"
+                    PostBack.Concurrency="Deny"
+                    Type="Primary" />
+        <bp:Button Text="Send Cargo (Queue)"
                        Click="{command: SendCargo(Index)}"
                        PostBack.Concurrency="Queue"
                        Type="Primary" />
-        </p>
-
     </div>
 
-    <div class="cargos">
+    <div class="cargo-box">
+        <div class="canvas">
+        </div>
 
-        <h2>Delivered</h2>
+        <div class="cargos">
 
-        <dot:Repeater DataSource="{value: Cargos}">
-            <div class="cargo delivered">{{value: _this}}</div>
-        </dot:Repeater>
+            <h2>Delivered</h2>
 
+            <dot:Repeater DataSource="{value: Cargos}">
+                <div class="cargo delivered">{{value: _this}}</div>
+            </dot:Repeater>
+
+        </div>
     </div>
 
 

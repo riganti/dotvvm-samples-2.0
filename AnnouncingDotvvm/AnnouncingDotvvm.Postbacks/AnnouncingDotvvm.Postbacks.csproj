@@ -18,6 +18,9 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Content Remove="wwwroot\logo-dotvvm.svg" />
+  </ItemGroup>
+  <ItemGroup>
     <None Remove="dotvvm_serialized_config.json.tmp" />
     <None Remove="Views\MasterPage.dotmaster" />
   </ItemGroup>
@@ -29,5 +32,8 @@
   </ItemGroup>
   <ItemGroup>
     <DotNetCliToolReference Include="DotVVM.Compiler.Light" Version="1.1.9" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\Images\logo-dotvvm.svg" />
   </ItemGroup>
 </Project>
