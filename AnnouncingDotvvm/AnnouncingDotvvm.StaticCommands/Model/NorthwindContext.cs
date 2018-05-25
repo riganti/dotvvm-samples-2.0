@@ -24,7 +24,7 @@ namespace AnnouncingDotvvm.StaticCommands.Model
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer(@"Data Source=.\SQLEXPRESS; Initial Catalog=northwind; Integrated Security=true");
+                optionsBuilder.UseSqlServer(@"Data Source=.\SQLEXPRESS; Initial Catalog=NORTHWND; Integrated Security=true");
             }
         }
 
