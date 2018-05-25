@@ -11,6 +11,4 @@
         <cc:FormControlsSample DataContext="{value: Address}" />
     </div>
 
-    <cc:FooterTemplate />
-
 </dot:Content>

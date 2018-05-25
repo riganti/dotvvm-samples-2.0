@@ -1,15 +1,16 @@
-﻿h1, h2, body {
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-}
-
-.column {
+﻿.column {
     width: 400px;
     display: inline-block;
     vertical-align: top;
+    margin-right: 5rem;
 }
 
 .table {
     border-collapse: collapse;
+
+    th {
+        padding: .3rem 1rem;
+    }
 }
 
 .table th, .table td {

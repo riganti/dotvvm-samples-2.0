@@ -25,7 +25,6 @@ namespace AnnouncingDotvvm.OtherFeatures
         {
             config.Markup.AddMarkupControl("cc", "CollectionSample", "Controls/CollectionSample.dotcontrol");
             config.Markup.AddMarkupControl("cc", "FormControlsSample", "embedded://AnnouncingDotvvm.EmbeddedControls/Controls.FormControlsSample.dotcontrol");
-            config.Markup.AddMarkupControl("cc", "FooterTemplate", "embedded://AnnouncingDotvvm.EmbeddedControls/Controls.FooterTemplate.dotcontrol");
             // register code-only controls and markup controls
         }
 

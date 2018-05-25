@@ -1,0 +1,77 @@
+﻿body {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  flex-direction: column;
+  font-family: 'Open Sans', sans-serif; }
+
+main {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  flex: 1 1 100%;
+  overflow-x: hidden;
+  overflow-y: auto; }
+
+footer {
+  flex: 0 0 auto;
+  text-align: center;
+  padding: 1rem;
+  background-color: #e8e8e8; }
+  footer > * {
+    vertical-align: middle; }
+
+.footer-logo {
+  display: inline-block;
+  width: 6rem;
+  height: auto; }
+
+.footer-text {
+  display: inline-block;
+  margin-left: 5rem; }
+  .footer-text a {
+    display: inline-block;
+    text-decoration: none;
+    color: #3176bb;
+    font-weight: 600;
+    margin: .5rem 2rem; }
+  .footer-text img {
+    vertical-align: middle;
+    width: 2rem;
+    margin-right: 0rem; }
+
+main {
+  position: relative; }
+  main .img-pattern {
+    position: absolute;
+    bottom: 0;
+    right: -110vh;
+    height: 80vh;
+    opacity: .2; }
+
+.column {
+  width: 400px;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 5rem; }
+
+.table {
+  border-collapse: collapse; }
+  .table th {
+    padding: .3rem 1rem; }
+
+.table th, .table td {
+  border: solid 1px lightgray; }
+
+.active {
+  background-color: lightsalmon; }
+
+.form td {
+  padding: 5px; }
+
+.command-bar {
+  text-align: right;
+  background-color: #f4f4f4;
+  padding: 10px 20px; }
+
