@@ -1,0 +1,66 @@
+﻿@import "_variables.scss";
+
+body {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    flex-direction: column;
+    font-family: 'Open Sans', sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    overflow: auto;
+}
+
+footer {
+    flex: 0 0 auto;
+    text-align: center;
+    padding: $padding;
+    background-color: $color-background-dark;
+
+    > * {
+        vertical-align: middle;
+    }
+}
+
+.footer {
+    &-logo {
+        display: inline-block;
+        width: 6rem;
+        height: auto;
+    }
+
+    &-text {
+        display: inline-block;
+        margin-left: 5rem;
+
+        a {
+            display: inline-block;
+            text-decoration: none;
+            color: $color-primary;
+            font-weight: 600;
+            margin: .5rem 2rem;
+        }
+
+        img {
+            vertical-align: middle;
+            width: 2rem;
+            margin-right: 0rem;
+        }
+    }
+}
+main {
+    position: relative;
+
+    .img-pattern {
+        position: absolute;
+        bottom: 0;
+        right: -110vh;
+        height: 80vh;
+        opacity: .2;
+    }
+}

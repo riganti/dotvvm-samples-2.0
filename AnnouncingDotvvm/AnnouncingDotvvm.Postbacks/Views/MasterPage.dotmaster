@@ -20,7 +20,7 @@
     </main>
 
     <footer>
-        <img class="footer-logo" src="~/Images/logo-dotvvm.svg"/>
+        <img class="footer-logo" src="~/Images/logo-dotvvm.svg" />
         <div class="footer-text">
             <a href="https://www.dotvvm.com">
                 <img src="~/Images/worldwide.svg" />

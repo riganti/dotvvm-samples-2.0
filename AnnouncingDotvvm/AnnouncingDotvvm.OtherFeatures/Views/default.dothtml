@@ -1,5 +1,6 @@
 ﻿@viewModel AnnouncingDotvvm.OtherFeatures.ViewModels.DefaultViewModel, AnnouncingDotvvm.OtherFeatures
 @masterPage Views/MasterPage.dotmaster
+
 <dot:Content ContentPlaceHolderID="MainContent">
 
     <div class="column">
@@ -9,5 +10,7 @@
     <div class="column">
         <cc:FormControlsSample DataContext="{value: Address}" />
     </div>
+
+    <cc:FooterTemplate />
 
 </dot:Content>

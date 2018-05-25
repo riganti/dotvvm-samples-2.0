@@ -11,6 +11,7 @@
         this.addEventListener("readystatechange", function () {
             if (this.readyState === 4) {
                 document.querySelector(".console").innerText += this.responseText.length + "\n";
+                document.querySelector(".console").scrollTop = document.querySelector(".console").scrollHeight;
             }
         }, false);
         open.call(this, method, url, async, user, pass);

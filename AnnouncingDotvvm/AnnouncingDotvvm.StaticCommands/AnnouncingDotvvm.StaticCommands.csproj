@@ -19,7 +19,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="dotvvm_serialized_config.json.tmp" />
+    <None Remove="wwwroot\Images\logo-dotvvm.svg" />
+    <None Remove="wwwroot\Images\worldwide.svg" />
+    <None Remove="wwwroot\Styles\site.css" />
+    <None Remove="wwwroot\Styles\site.min.css" />
+    <None Remove="wwwroot\Styles\style.scss" />
+    <None Remove="wwwroot\Styles\_default.scss" />
+    <None Remove="wwwroot\Styles\_variables.scss" />
     <None Remove="Views\MasterPage.dotmaster" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\Styles\_layout.scss" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="DotVVM.BusinessPack" Version="2.0.0-preview09-28162" />
@@ -30,9 +40,5 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.0.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.Design" Version="1.1.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.3" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\Images\" />
-    <Folder Include="Resources\Styles\" />
   </ItemGroup>
 </Project>

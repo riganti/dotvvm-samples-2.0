@@ -9,9 +9,7 @@
 </head>
 <body>
 
- 	
-
 	<dot:ContentPlaceHolder ID="MainContent" />
-
+    
 </body>
 </html>
