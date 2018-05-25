@@ -6,17 +6,17 @@
 
     <div class="control-panel">
         <bp:Button Text="Send Cargo (Default)"
-                    Click="{command: SendCargo(Index)}"
-                    PostBack.Concurrency="None"
-                    Type="Primary" />
+                Click="{command: SendCargo(Index)}"
+                PostBack.Concurrency="Default"
+                Type="Primary" />
         <bp:Button Text="Send Cargo (Deny)"
-                    Click="{command: SendCargo(Index)}"
-                    PostBack.Concurrency="Deny"
-                    Type="Primary" />
+                Click="{command: SendCargo(Index)}"
+                PostBack.Concurrency="Deny"
+                Type="Primary" />
         <bp:Button Text="Send Cargo (Queue)"
-                       Click="{command: SendCargo(Index)}"
-                       PostBack.Concurrency="Queue"
-                       Type="Primary" />
+                Click="{command: SendCargo(Index)}"
+                PostBack.Concurrency="Queue"
+                Type="Primary" />
     </div>
 
     <div class="cargo-box">
