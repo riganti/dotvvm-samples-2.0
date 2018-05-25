@@ -23,16 +23,12 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="DotVVM.BusinessPack" Version="2.0.0-preview09-28162" />
-    <PackageReference Include="DotVVM.AspNetCore" Version="2.0.0-preview09-28091" />
+    <PackageReference Include="DotVVM.AspNetCore" Version="2.0.0" />
     <PackageReference Include="Microsoft.AspNetCore" Version="2.0.3" />
     <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.0.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.0.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.0.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.Design" Version="1.1.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.3" />
-
-  </ItemGroup>
-  <ItemGroup>
-    <DotNetCliToolReference Include="DotVVM.Compiler.Light" Version="1.1.9" />
   </ItemGroup>
 </Project>

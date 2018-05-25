@@ -61,5 +61,10 @@ namespace AnnouncingDotvvm.StaticCommands.ViewModels
             productService.Reorder(ReorderDialog.Product.ProductId, ReorderDialog.OrderQuantity);
             ReorderDialog.Product = null;
         }
+
+        public void CancelOrder()
+        {
+            ReorderDialog.Product = null;
+        }
     }
 }

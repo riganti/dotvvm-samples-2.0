@@ -72,10 +72,15 @@
         </ContentTemplate>
         <FooterTemplate>
 
-            <bp:Button ButtonTagName="button" Type="Primary" Click="{command: _root.MakeOrder()}">
-                <bp:FAIcon Icon="ShoppingBasketSolid" /> Make Order (command)
+            <bp:Button ButtonTagName="button" Type="Primary" 
+                       Click="{command: _root.MakeOrder()}">
+                <bp:FAIcon Icon="ShoppingBasketSolid" /> Make Order
             </bp:Button>
-            
+            <bp:Button ButtonTagName="button" Type="Secondary"
+                       Click="{command: _root.CancelOrder()}">
+                <bp:FAIcon Icon="UndoSolid" /> Cancel
+            </bp:Button>
+
         </FooterTemplate>
     </bp:ModalDialog>
 
@@ -83,7 +88,11 @@
 
     <bp:ModalDialog DataContext="{value: ReorderDialog2}"
                     IsDisplayed="{value: Product != null}"
-                    HeaderText="Reorder Product">
+                    CloseOnEscape="false"
+                    CloseOnOutsideClick="false">
+        <HeaderTemplate>
+            Reorder Product
+        </HeaderTemplate>
         <ContentTemplate>
 
             <table>
@@ -116,7 +125,11 @@
 
             <bp:Button ButtonTagName="button" Type="Primary"
                        Click="{staticCommand: productService.Reorder(Product.ProductId, OrderQuantity); Product = null}">
-                <bp:FAIcon Icon="ShoppingBasketSolid" /> Make Order (staticCommand)
+                <bp:FAIcon Icon="ShoppingBasketSolid" /> Make Order
+            </bp:Button>
+            <bp:Button ButtonTagName="button" Type="Secondary"
+                       Click="{staticCommand: Product = null}">
+                <bp:FAIcon Icon="UndoSolid" /> Cancel
             </bp:Button>
 
         </FooterTemplate>
