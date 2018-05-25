@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Controls\FormControlsSample.dotcontrol" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\FormControlsSample.dotcontrol">
+      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="DotVVM.AspNetCore" Version="2.0.0-preview09-28091" />
+  </ItemGroup>
+</Project>

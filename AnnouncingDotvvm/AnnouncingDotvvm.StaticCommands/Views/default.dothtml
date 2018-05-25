@@ -1,0 +1,130 @@
+﻿@viewModel AnnouncingDotvvm.StaticCommands.ViewModels.DefaultViewModel, AnnouncingDotvvm.StaticCommands
+@masterPage Views/MasterPage.dotmaster
+@service productService = AnnouncingDotvvm.StaticCommands.Services.ProductService
+
+<dot:Content ContentPlaceHolderID="MainContent">
+
+    <h1>Static Command Bindings</h1>
+
+    <bp:GridView DataSource="{value: Items}">
+        <RowDecorators>
+            <dot:Decorator class-row-warning="{value: UnitsInStock + UnitsOnOrder < ReorderLevel}" />
+        </RowDecorators>
+
+        <bp:GridViewTextColumn Value="{value: ProductName}" HeaderText="Name" />
+        <bp:GridViewTextColumn Value="{value: CategoryName}" HeaderText="Category" />
+        <bp:GridViewTextColumn Value="{value: SupplierName}" HeaderText="Supplier" />
+        <bp:GridViewTextColumn Value="{value: QuantityPerUnit}" HeaderText="Qty/Unit" />
+        <bp:GridViewTextColumn Value="{value: UnitPrice}" HeaderText="Unit Price" FormatString="c2" />
+        <bp:GridViewTextColumn Value="{value: UnitsInStock}" HeaderText="Units in Stock" FormatString="n2" />
+        <bp:GridViewTextColumn Value="{value: UnitsOnOrder}" HeaderText="Units on Order" FormatString="n2" />
+        <bp:GridViewTextColumn Value="{value: ReorderLevel}" HeaderText="Reorder Level" FormatString="n2" />
+        <bp:GridViewCheckBoxColumn Value="{value: Discontinued}" HeaderText="Discontinued" />
+
+        <bp:GridViewTemplateColumn>
+            <bp:Button ButtonTagName="button" Type="Primary" Click="{command: _root.ShowReorderDialog(ProductId)}">
+                <bp:FAIcon Icon="ShoppingBasketSolid" /> Reorder (command)
+            </bp:Button>
+        </bp:GridViewTemplateColumn>
+
+        <bp:GridViewTemplateColumn>
+            <bp:Button ButtonTagName="button" Type="Primary"
+                       Click="{staticCommand: _root.ReorderDialog2.Product = productService.GetById(ProductId)}">
+                <bp:FAIcon Icon="ShoppingBasketSolid" /> Reorder (staticCommand)
+            </bp:Button>
+        </bp:GridViewTemplateColumn>
+
+    </bp:GridView>
+
+    <bp:DataPager DataSet="{value: Items}" />
+
+
+    <bp:ModalDialog DataContext="{value: ReorderDialog}"
+                    IsDisplayed="{value: Product != null}"
+                    HeaderText="Reorder Product">
+        <ContentTemplate>
+
+            <table>
+                <tr>
+                    <td>Product:</td>
+                    <td>{{value: Product.ProductName}}</td>
+                </tr>
+                <tr>
+                    <td>Units in Stock:</td>
+                    <td>{{value: Product.UnitsInStock}}</td>
+                </tr>
+                <tr>
+                    <td>Units on Order:</td>
+                    <td>{{value: Product.UnitsOnOrder}}</td>
+                </tr>
+                <tr>
+                    <td>Reorder Level:</td>
+                    <td>{{value: Product.ReorderLevel}}</td>
+                </tr>
+                <tr>
+                    <td>Order Quantity:</td>
+                    <td>
+                        <dot:TextBox Text="{value: OrderQuantity}" FormatString="n0" />
+                    </td>
+                </tr>
+            </table>
+
+        </ContentTemplate>
+        <FooterTemplate>
+
+            <bp:Button ButtonTagName="button" Type="Primary" Click="{command: _root.MakeOrder()}">
+                <bp:FAIcon Icon="ShoppingBasketSolid" /> Make Order (command)
+            </bp:Button>
+            
+        </FooterTemplate>
+    </bp:ModalDialog>
+
+
+
+    <bp:ModalDialog DataContext="{value: ReorderDialog2}"
+                    IsDisplayed="{value: Product != null}"
+                    HeaderText="Reorder Product">
+        <ContentTemplate>
+
+            <table>
+                <tr>
+                    <td>Product:</td>
+                    <td>{{value: Product.ProductName}}</td>
+                </tr>
+                <tr>
+                    <td>Units in Stock:</td>
+                    <td>{{value: Product.UnitsInStock}}</td>
+                </tr>
+                <tr>
+                    <td>Units on Order:</td>
+                    <td>{{value: Product.UnitsOnOrder}}</td>
+                </tr>
+                <tr>
+                    <td>Reorder Level:</td>
+                    <td>{{value: Product.ReorderLevel}}</td>
+                </tr>
+                <tr>
+                    <td>Order Quantity:</td>
+                    <td>
+                        <dot:TextBox Text="{value: OrderQuantity}" FormatString="n0" />
+                    </td>
+                </tr>
+            </table>
+
+        </ContentTemplate>
+        <FooterTemplate>
+
+            <bp:Button ButtonTagName="button" Type="Primary"
+                       Click="{staticCommand: productService.Reorder(Product.ProductId, OrderQuantity); Product = null}">
+                <bp:FAIcon Icon="ShoppingBasketSolid" /> Make Order (staticCommand)
+            </bp:Button>
+
+        </FooterTemplate>
+    </bp:ModalDialog>
+
+    <div class="console"></div>
+
+    <script type="text/javascript" src="diag.js">
+    </script>
+
+</dot:Content>

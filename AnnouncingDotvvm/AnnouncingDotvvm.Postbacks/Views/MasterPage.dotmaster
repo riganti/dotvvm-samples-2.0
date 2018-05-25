@@ -1,0 +1,17 @@
+﻿@viewModel AnnouncingDotvvm.Postbacks.ViewModels.MasterPageViewModel, AnnouncingDotvvm.Postbacks
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>PostBack Concurrency</title>
+    <link href="~/site.css" rel="stylesheet" />
+</head>
+<body>
+
+	<dot:ContentPlaceHolder ID="MainContent" />
+    
+    <dot:RequiredResource Name="animations" />
+
+</body>
+</html>

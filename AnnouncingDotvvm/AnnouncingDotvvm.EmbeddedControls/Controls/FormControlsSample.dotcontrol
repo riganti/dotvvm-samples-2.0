@@ -1,0 +1,58 @@
+﻿@viewModel AnnouncingDotvvm.EmbeddedControls.ViewModels.AddressViewModel, AnnouncingDotvvm.EmbeddedControls
+
+<h1>FormControls.Enabled</h1>
+
+<div class="command-bar">
+    <dot:Button Text="{value: IsInEditMode ? 'Cancel' : 'Edit'}"
+                Click="{staticCommand: IsInEditMode = !IsInEditMode}" />
+</div>
+
+<table DataContext="{value: Address}" class="form"
+       FormControls.Enabled="{value: _parent.IsInEditMode}">
+    <tr>
+        <td>Name</td>
+        <td>
+            <dot:TextBox Text="{value: Name}" />
+        </td>
+    </tr>
+    <tr>
+        <td>Street</td>
+        <td>
+            <dot:TextBox Text="{value: Street}" />
+        </td>
+    </tr>
+    <tr>
+        <td>City</td>
+        <td>
+            <dot:TextBox Text="{value: City}" />
+        </td>
+    </tr>
+    <tr>
+        <td>ZIP</td>
+        <td>
+            <dot:TextBox Text="{value: ZIP}" />
+        </td>
+    </tr>
+    <tr>
+        <td>Country</td>
+        <td>
+            <dot:ComboBox DataSource="{value: _parent.Countries}" 
+                          SelectedValue="{value: CountryId}"
+                          ItemValueBinding="{value: Id}"
+                          ItemTextBinding="{value: Name}"/>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Is Company</td>
+        <td>
+            <dot:CheckBox Checked="{value: IsCompany}" />
+        </td>
+    </tr>
+    <tr>
+        <td>Company Number</td>
+        <td>
+            <dot:TextBox Text="{value: CompanyNumber}" Enabled="{value: IsCompany}" />
+        </td>
+    </tr>
+</table>

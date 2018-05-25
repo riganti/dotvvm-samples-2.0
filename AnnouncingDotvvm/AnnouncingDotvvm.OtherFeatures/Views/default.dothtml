@@ -1,0 +1,17 @@
+﻿@viewModel AnnouncingDotvvm.OtherFeatures.ViewModels.DefaultViewModel, AnnouncingDotvvm.OtherFeatures
+@masterPage Views/MasterPage.dotmaster
+<dot:Content ContentPlaceHolderID="MainContent">
+
+    <div class="column">
+        <cc:CollectionSample />
+    </div>
+
+    <div class="column">
+        <cc:FormControlsSample DataContext="{value: Address}" />
+    </div>
+
+    <div class="column">
+
+    </div>
+
+</dot:Content>

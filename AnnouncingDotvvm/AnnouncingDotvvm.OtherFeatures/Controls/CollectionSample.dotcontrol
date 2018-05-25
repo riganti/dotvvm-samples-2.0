@@ -1,0 +1,24 @@
+@viewModel AnnouncingDotvvm.OtherFeatures.ViewModels.DefaultViewModel, AnnouncingDotvvm.OtherFeatures 
+
+<h1>_collection</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Number</th>
+            <th>Index</th>
+            <th>IsFirst</th>
+            <th>IsOdd</th>
+            <th>IsEven</th>
+        </tr>
+    </thead>
+    <dot:Repeater DataSource="{value: Numbers}" WrapperTagName="tbody">
+        <tr>
+            <td>{{value: _this}}</td>
+            <td>{{value: _collection.Index}}</td>
+            <td class-active="{value: _collection.IsFirst}"></td>
+            <td class-active="{value: _collection.IsOdd}"></td>
+            <td class-active="{value: _collection.IsEven}"></td>
+        </tr>
+    </dot:Repeater>
+</table>
