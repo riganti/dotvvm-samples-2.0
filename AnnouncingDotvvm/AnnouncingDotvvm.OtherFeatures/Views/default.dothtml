@@ -10,8 +10,4 @@
         <cc:FormControlsSample DataContext="{value: Address}" />
     </div>
 
-    <div class="column">
-
-    </div>
-
 </dot:Content>

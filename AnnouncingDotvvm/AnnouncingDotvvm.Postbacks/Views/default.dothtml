@@ -12,7 +12,7 @@
         <p>
             <bp:Button Text="Send Cargo (Default)"
                        Click="{command: SendCargo(Index)}"
-                       PostBack.Concurrency="None"
+                       PostBack.Concurrency="Default"
                        Type="Primary" />
         </p>
 
